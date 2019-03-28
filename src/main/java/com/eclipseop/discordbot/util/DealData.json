@@ -1,0 +1,1873 @@
+[
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "House of Mirrors",
+				"quantity": 9
+			}
+		],
+		"product": {
+			"name": "Mirror of Kalandra",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Doctor",
+				"quantity": 8
+			}
+		],
+		"product": {
+			"name": "Headhunter",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Fiend",
+				"quantity": 11
+			}
+		],
+		"product": {
+			"name": "Headhunter",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "Beauty Through Death",
+				"quantity": 5
+			}
+		],
+		"product": {
+			"name": "The Queen's Sacrifice",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "Immortal Resolve",
+				"quantity": 6
+			}
+		],
+		"product": {
+			"name": "Fated Connections",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Life Thief",
+				"quantity": 6
+			}
+		],
+		"product": {
+			"name": "Zerphi's Heart",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Iron Bard",
+				"quantity": 9
+			}
+		],
+		"product": {
+			"name": "Trash to Treasure",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Spark and the Flame",
+				"quantity": 2
+			}
+		],
+		"product": {
+			"name": "Berek's Respite",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Immortal",
+				"quantity": 10
+			}
+		],
+		"product": {
+			"name": "House of Mirrors",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Nurse",
+				"quantity": 8
+			}
+		],
+		"product": {
+			"name": "The Doctor",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "Abandoned Wealth",
+				"quantity": 5
+			}
+		],
+		"product": {
+			"name": "Exalted Orb",
+			"quantity": 3
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "Hunter's Reward",
+				"quantity": 3
+			}
+		],
+		"product": {
+			"name": "The Taming",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Samurai's Eye",
+				"quantity": 3
+			}
+		],
+		"product": {
+			"name": "Watcher's Eye",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Dragon's Heart",
+				"quantity": 11
+			}
+		],
+		"product": {
+			"name": "Empower Support (lvl 4) (corrupted)",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Offering",
+				"quantity": 8
+			}
+		],
+		"product": {
+			"name": "Shavronne's Wrappings",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Wolven King's Bite",
+				"quantity": 8
+			}
+		],
+		"product": {
+			"name": "Rigwald's Quills",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Mayor",
+				"quantity": 5
+			}
+		],
+		"product": {
+			"name": "The Perandus Manor",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "Wealth and Power",
+				"quantity": 11
+			}
+		],
+		"product": {
+			"name": "Enlighten Support (lvl 4) (corrupted)",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "Pride Before the Fall",
+				"quantity": 8
+			}
+		],
+		"product": {
+			"name": "Kaom's Heart",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Ethereal",
+				"quantity": 7
+			}
+		],
+		"product": {
+			"name": "Divine Orb",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Risk",
+				"quantity": 3
+			}
+		],
+		"product": {
+			"name": "Ventor's Gamble",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "Seven Years Bad Luck",
+				"quantity": 13
+			}
+		],
+		"product": {
+			"name": "Mirror Shard",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The King's Heart",
+				"quantity": 8
+			}
+		],
+		"product": {
+			"name": "Kaom's Heart",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "Mawr Blaidd",
+				"quantity": 16
+			}
+		],
+		"product": {
+			"name": "Eyes of the Greatwolf",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Saint's Treasure",
+				"quantity": 10
+			}
+		],
+		"product": {
+			"name": "Exalted Orb",
+			"quantity": 2
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Artist",
+				"quantity": 11
+			}
+		],
+		"product": {
+			"name": "Enhance Support (lvl 4) (corrupted)",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Enlightened",
+				"quantity": 6
+			}
+		],
+		"product": {
+			"name": "Enlighten Support (lvl 3)",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Queen",
+				"quantity": 16
+			}
+		],
+		"product": {
+			"name": "Atziri's Acuity",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Master",
+				"quantity": 4
+			}
+		],
+		"product": {
+			"name": "Bisco's Collar",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Wind",
+				"quantity": 7
+			}
+		],
+		"product": {
+			"name": "Windripper",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Brittle Emperor",
+				"quantity": 8
+			}
+		],
+		"product": {
+			"name": "Voll's Devotion",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Professor",
+				"quantity": 4
+			}
+		],
+		"product": {
+			"name": "The Putrid Cloister",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Sephirot",
+				"quantity": 11
+			}
+		],
+		"product": {
+			"name": "Divine Orb",
+			"quantity": 10
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Landing",
+				"quantity": 5
+			}
+		],
+		"product": {
+			"name": "The Beachhead",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Hoarder",
+				"quantity": 12
+			}
+		],
+		"product": {
+			"name": "Exalted Orb",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Celestial Justicar",
+				"quantity": 6
+			}
+		],
+		"product": {
+			"name": "Divine Orb",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Polymath",
+				"quantity": 3
+			}
+		],
+		"product": {
+			"name": "Astramentis",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The World Eater",
+				"quantity": 8
+			}
+		],
+		"product": {
+			"name": "Starforge",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Sacrifice",
+				"quantity": 4
+			}
+		],
+		"product": {
+			"name": "Divine Orb",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "Chaotic Disposition",
+				"quantity": 1
+			}
+		],
+		"product": {
+			"name": "Apprentice Cartographer's Sextant",
+			"quantity": 5
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Dapper Prodigy",
+				"quantity": 6
+			}
+		],
+		"product": {
+			"name": "Divine Orb",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Porcupine",
+				"quantity": 6
+			}
+		],
+		"product": {
+			"name": "Divine Orb",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Seeker",
+				"quantity": 9
+			}
+		],
+		"product": {
+			"name": "Orb of Annulment",
+			"quantity": 3
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Valley of Steel Boxes",
+				"quantity": 9
+			}
+		],
+		"product": {
+			"name": "Monstrous Treasure",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "Bowyer's Dream",
+				"quantity": 6
+			}
+		],
+		"product": {
+			"name": "Divine Orb",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "Last Hope",
+				"quantity": 3
+			}
+		],
+		"product": {
+			"name": "Mortal Hope",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Cartographer",
+				"quantity": 1
+			}
+		],
+		"product": {
+			"name": "Cartographer's Chisel",
+			"quantity": 10
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Dark Mage",
+				"quantity": 6
+			}
+		],
+		"product": {
+			"name": "Divine Orb",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Hunger",
+				"quantity": 9
+			}
+		],
+		"product": {
+			"name": "Taste of Hate",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Jeweller's Boon",
+				"quantity": 5
+			}
+		],
+		"product": {
+			"name": "The Jeweller's Touch",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Journey",
+				"quantity": 3
+			}
+		],
+		"product": {
+			"name": "Harbinger's Orb",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Thaumaturgist",
+				"quantity": 8
+			}
+		],
+		"product": {
+			"name": "Shavronne's Revelation",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Throne",
+				"quantity": 2
+			}
+		],
+		"product": {
+			"name": "Kaom's Roots",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Endless Darkness",
+				"quantity": 9
+			}
+		],
+		"product": {
+			"name": "Voidforge",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Innocent",
+				"quantity": 10
+			}
+		],
+		"product": {
+			"name": "Orb of Regret",
+			"quantity": 40
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "Emperor of Purity",
+				"quantity": 7
+			}
+		],
+		"product": {
+			"name": "Divine Orb",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "Scholar of the Seas",
+				"quantity": 7
+			}
+		],
+		"product": {
+			"name": "Mao Kun",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Chains that Bind",
+				"quantity": 11
+			}
+		],
+		"product": {
+			"name": "Divine Orb",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "Rebirth",
+				"quantity": 27
+			}
+		],
+		"product": {
+			"name": "Oni-Goroshi (6)",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Mad King",
+				"quantity": 7
+			}
+		],
+		"product": {
+			"name": "The King's Path",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Last One Standing",
+				"quantity": 10
+			}
+		],
+		"product": {
+			"name": "Atziri's Disfavour",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Twilight Moon",
+				"quantity": 6
+			}
+		],
+		"product": {
+			"name": "The Twilight Temple",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Inventor",
+				"quantity": 6
+			}
+		],
+		"product": {
+			"name": "Vaal Orb",
+			"quantity": 10
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "Humility",
+				"quantity": 9
+			}
+		],
+		"product": {
+			"name": "Tabula Rasa",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "Lucky Connections",
+				"quantity": 7
+			}
+		],
+		"product": {
+			"name": "Orb of Fusing",
+			"quantity": 20
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Warlord",
+				"quantity": 6
+			}
+		],
+		"product": {
+			"name": "Divine Orb",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "Audacity",
+				"quantity": 5
+			}
+		],
+		"product": {
+			"name": "Doryani's Fist",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Avenger",
+				"quantity": 12
+			}
+		],
+		"product": {
+			"name": "Mjölner",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Conduit",
+				"quantity": 9
+			}
+		],
+		"product": {
+			"name": "Doryani's Fist",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Cursed King",
+				"quantity": 8
+			}
+		],
+		"product": {
+			"name": "Rigwald's Curse",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Demoness",
+				"quantity": 5
+			}
+		],
+		"product": {
+			"name": "Death's Hand",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Dragon",
+				"quantity": 4
+			}
+		],
+		"product": {
+			"name": "Coruscating Elixir",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Fletcher",
+				"quantity": 5
+			}
+		],
+		"product": {
+			"name": "Drillneck",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Formless Sea",
+				"quantity": 7
+			}
+		],
+		"product": {
+			"name": "Varunastra",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Harvester",
+				"quantity": 11
+			}
+		],
+		"product": {
+			"name": "The Harvest",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Oath",
+				"quantity": 6
+			}
+		],
+		"product": {
+			"name": "Death's Oath",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The One With All",
+				"quantity": 6
+			}
+		],
+		"product": {
+			"name": "Le Heup of All",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Scavenger",
+				"quantity": 8
+			}
+		],
+		"product": {
+			"name": "Carcass Jack",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Siren",
+				"quantity": 7
+			}
+		],
+		"product": {
+			"name": "The Whispering Ice",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Soul",
+				"quantity": 9
+			}
+		],
+		"product": {
+			"name": "Soul Taker",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Survivalist",
+				"quantity": 3
+			}
+		],
+		"product": {
+			"name": "Orb of Alchemy",
+			"quantity": 7
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Union",
+				"quantity": 7
+			}
+		],
+		"product": {
+			"name": "Gemcutter's Prism",
+			"quantity": 10
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Wrath",
+				"quantity": 8
+			}
+		],
+		"product": {
+			"name": "Apprentice Cartographer's Sextant",
+			"quantity": 10
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "Treasure Hunter",
+				"quantity": 7
+			}
+		],
+		"product": {
+			"name": "Vaults of Atziri",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "Vinia's Token",
+				"quantity": 5
+			}
+		],
+		"product": {
+			"name": "Orb of Regret",
+			"quantity": 10
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "No Traces",
+				"quantity": 9
+			}
+		],
+		"product": {
+			"name": "Orb of Scouring",
+			"quantity": 30
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Realm",
+				"quantity": 5
+			}
+		],
+		"product": {
+			"name": "Portal",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Insatiable",
+				"quantity": 3
+			}
+		],
+		"product": {
+			"name": "The Harvest",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Beast",
+				"quantity": 6
+			}
+		],
+		"product": {
+			"name": "Belly of the Beast",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Dreamland",
+				"quantity": 8
+			}
+		],
+		"product": {
+			"name": "Poorjoy's Asylum",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Darkest Dream",
+				"quantity": 6
+			}
+		],
+		"product": {
+			"name": "Severed in Sleep",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "A Dab of Ink",
+				"quantity": 9
+			}
+		],
+		"product": {
+			"name": "The Poet's Pen",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Forsaken",
+				"quantity": 7
+			}
+		],
+		"product": {
+			"name": "Umbilicus Immortalis",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Feast",
+				"quantity": 5
+			}
+		],
+		"product": {
+			"name": "Romira's Banquet",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Pact",
+				"quantity": 9
+			}
+		],
+		"product": {
+			"name": "Pledge of Hands",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "Anarchy's Price",
+				"quantity": 13
+			}
+		],
+		"product": {
+			"name": "Voltaxic Rift",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "Coveted Possession",
+				"quantity": 9
+			}
+		],
+		"product": {
+			"name": "Regal Orb",
+			"quantity": 5
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "Grave Knowledge",
+				"quantity": 6
+			}
+		],
+		"product": {
+			"name": "Summon Raging Spirit",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "Loyalty",
+				"quantity": 5
+			}
+		],
+		"product": {
+			"name": "Orb of Fusing",
+			"quantity": 3
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "Rats",
+				"quantity": 8
+			}
+		],
+		"product": {
+			"name": "Rat's Nest",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Catalyst",
+				"quantity": 3
+			}
+		],
+		"product": {
+			"name": "Vaal Orb",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Drunken Aristocrat",
+				"quantity": 8
+			}
+		],
+		"product": {
+			"name": "Divination Distillate",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Gemcutter",
+				"quantity": 3
+			}
+		],
+		"product": {
+			"name": "Gemcutter's Prism",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Incantation",
+				"quantity": 4
+			}
+		],
+		"product": {
+			"name": "The Whispering Ice",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Lich",
+				"quantity": 12
+			}
+		],
+		"product": {
+			"name": "Midnight Bargain",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Pack Leader",
+				"quantity": 6
+			}
+		],
+		"product": {
+			"name": "Alpha's Howl",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Poet",
+				"quantity": 9
+			}
+		],
+		"product": {
+			"name": "Blood of Corruption",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Scarred Meadow",
+				"quantity": 9
+			}
+		],
+		"product": {
+			"name": "Wake of Destruction",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Scholar",
+				"quantity": 3
+			}
+		],
+		"product": {
+			"name": "Scroll of Wisdom",
+			"quantity": 40
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Sun",
+				"quantity": 7
+			}
+		],
+		"product": {
+			"name": "Rise of the Phoenix",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Visionary",
+				"quantity": 6
+			}
+		],
+		"product": {
+			"name": "Lioneye's Vision",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Wolf's Shadow",
+				"quantity": 3
+			}
+		],
+		"product": {
+			"name": "Hyaon's Fury",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "Three Faces in the Dark",
+				"quantity": 7
+			}
+		],
+		"product": {
+			"name": "Apprentice Cartographer's Sextant",
+			"quantity": 3
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "Tranquillity",
+				"quantity": 7
+			}
+		],
+		"product": {
+			"name": "Voltaxic Rift",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "Turn the Other Cheek",
+				"quantity": 3
+			}
+		],
+		"product": {
+			"name": "Pacifism",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Coming Storm",
+				"quantity": 8
+			}
+		],
+		"product": {
+			"name": "Lightning Coil",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "Might is Right",
+				"quantity": 9
+			}
+		],
+		"product": {
+			"name": "Trypanon",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Ruthless Ceinture",
+				"quantity": 7
+			}
+		],
+		"product": {
+			"name": "Meginord's Girdle",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "Forbidden Power",
+				"quantity": 4
+			}
+		],
+		"product": {
+			"name": "Balefire",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Sword King's Salute",
+				"quantity": 7
+			}
+		],
+		"product": {
+			"name": "Daresso's Salute",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Fathomless Depths",
+				"quantity": 8
+			}
+		],
+		"product": {
+			"name": "Lightpoacher",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Witch",
+				"quantity": 8
+			}
+		],
+		"product": {
+			"name": "Kiara's Determination",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "Boon of Justice",
+				"quantity": 6
+			}
+		],
+		"product": {
+			"name": "Offering to the Goddess",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "A Mother's Parting Gift",
+				"quantity": 6
+			}
+		],
+		"product": {
+			"name": "Fertile Mind",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "Death",
+				"quantity": 4
+			}
+		],
+		"product": {
+			"name": "Mon'tregul's Grasp",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "Rain of Chaos",
+				"quantity": 8
+			}
+		],
+		"product": {
+			"name": "Apprentice Cartographer's Sextant",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Watcher",
+				"quantity": 12
+			}
+		],
+		"product": {
+			"name": "Crown of Eyes",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Deceiver",
+				"quantity": 4
+			}
+		],
+		"product": {
+			"name": "Belt of the Deceiver",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "Dark Temptation",
+				"quantity": 5
+			}
+		],
+		"product": {
+			"name": "Obliteration",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Blazing Fire",
+				"quantity": 6
+			}
+		],
+		"product": {
+			"name": "Chin Sol",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Betrayal",
+				"quantity": 9
+			}
+		],
+		"product": {
+			"name": "Maligaro's Virtuosity",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Lunaris Priestess",
+				"quantity": 5
+			}
+		],
+		"product": {
+			"name": "Sire of Shards",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "Thunderous Skies",
+				"quantity": 5
+			}
+		],
+		"product": {
+			"name": "Storm Cloud",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Army of Blood",
+				"quantity": 6
+			}
+		],
+		"product": {
+			"name": "Bloodbond",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "div",
+		"regents": [
+			{
+				"name": "The Hermit",
+				"quantity": 9
+			}
+		],
+		"product": {
+			"name": "Lifesprig",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "vendor",
+		"regents": [
+			{
+				"name": "Feastbind",
+				"quantity": 1
+			},
+			{
+				"name": "Faminebind",
+				"quantity": 1
+			},
+			{
+				"name": "Orb of Fusing",
+				"quantity": 1
+			}
+		],
+		"product": {
+			"name": "The Retch",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "vendor",
+		"regents": [
+			{
+				"name": "Voideye",
+				"quantity": 60
+			}
+		],
+		"product": {
+			"name": "Loreweave",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "consumable",
+		"regents": [
+			{
+				"name": "Splinter of Chayula",
+				"quantity": 100
+			}
+		],
+		"product": {
+			"name": "Chayula's Breachstone",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "consumable",
+		"regents": [
+			{
+				"name": "Splinter of Esh",
+				"quantity": 100
+			}
+		],
+		"product": {
+			"name": "Esh's Breachstone",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "consumable",
+		"regents": [
+			{
+				"name": "Splinter of Tul",
+				"quantity": 100
+			}
+		],
+		"product": {
+			"name": "Tul's Breachstone",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "consumable",
+		"regents": [
+			{
+				"name": "Splinter of Uul-Netol",
+				"quantity": 100
+			}
+		],
+		"product": {
+			"name": "Uul-Netol's Breachstone",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "consumable",
+		"regents": [
+			{
+				"name": "Splinter of Xoph",
+				"quantity": 100
+			}
+		],
+		"product": {
+			"name": "Xoph's Breachstone",
+			"quantity": 1
+		}
+	},
+	{
+		"type": "consumable",
+		"regents": [
+			{
+				"name": "The Snowblind Grace",
+				"quantity": 1
+			},
+			{
+				"name": "Blessing of Tul",
+				"quantity": 1
+			}
+		],
+		"product": {
+			"name": "The Perfect Form",
+			"quantity": 1
+		}
+	}
+]
