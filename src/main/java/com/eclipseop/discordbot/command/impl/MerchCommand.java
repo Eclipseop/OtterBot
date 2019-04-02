@@ -81,7 +81,6 @@ public class MerchCommand extends Command {
 
 				if (item == null) return;
 				message.setTitle(item.getName());
-				System.out.println(item.getIcon());
 				message.setThumbnail(item.getIcon());
 				message.addField("Value", item.getPrice() + "", true);
 				break;

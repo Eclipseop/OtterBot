@@ -47,7 +47,7 @@ public class Bot {
 
 	public Guild getGuild() {
 		// TODO: 3/28/2019 make dynamic, no longer requiring guild id
-		return jda.getGuildById(Bootstrap.getKEYS().DISCORD);
+		return jda.getGuildById(Bootstrap.getKEYS().GUILD);
 	}
 
 	public void sendMessage(String message, TextChannel textChannel) {
