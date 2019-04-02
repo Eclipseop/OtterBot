@@ -1,7 +1,7 @@
 # OtterBot
 OtterBot is a Java discord bot, using JDA.
 
-#Commands
+## Commands
 * Music
     * play(*url*) - Plays the url provided,
     * play(*search*) - Uses Youtube API and returns a search result.
@@ -11,7 +11,7 @@ OtterBot is a Java discord bot, using JDA.
     * deal(*item name*) - Provides specific infomation about a deal.
     * price(*item name*) - Returns the price of a specific item.
     
-#Dependencies
+## Dependencies
 * [JDA](https://github.com/DV8FromTheWorld/JDA)
 * [Gson](https://github.com/google/gson)
 * [LavaPlayer](https://github.com/sedmelluq/lavaplayer)
