@@ -10,7 +10,7 @@ public class ItemLookup {
 
 	@SerializedName(value = "name", alternate = "currencyTypeName")
 	private String name;
-	@SerializedName(value = "chaosValue")
+	@SerializedName(value = "chaosValue", alternate = "mode")
 	private double price;
 	private int links;
 	private boolean corrupted;

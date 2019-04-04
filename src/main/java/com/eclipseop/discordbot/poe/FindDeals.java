@@ -27,13 +27,11 @@ import java.util.stream.Collectors;
  */
 public class FindDeals {
 
-	//public static final String FILE_PATH = "E:\\Dropbox\\programming\\BestDerEverWasyBot\\src\\main\\java\\com\\eclipseop\\discordbot\\util\\DealData.json";
 	public static String FILE_PATH;
 
-	//public final URL FILE_PATH = this.getClass().getClassLoader().getResource("DealData.json");
 	private static final String[] API_LINKS = {
 			"https://poe.ninja/api/data/currencyoverview?league=Synthesis&type=Currency",
-			"https://poe.ninja/api/data/itemoverview?league=Synthesis&type=DivinationCard",
+			"https://api.poe.watch/get?league=Synthesis&category=card",
 			"https://poe.ninja/api/data/itemoverview?league=Synthesis&type=UniqueArmour",
 			"https://poe.ninja/api/data/itemoverview?league=Synthesis&type=UniqueAccessory",
 			"https://poe.ninja/api/data/itemoverview?league=Synthesis&type=Prophecy",
@@ -112,6 +110,14 @@ public class FindDeals {
 			urlConnection.setRequestProperty("User-Agent", "Mozilla/5.0");
 
 			final JsonElement parse = new JsonParser().parse(new BufferedReader(new InputStreamReader(urlConnection.getInputStream())));
+
+			if (apiLink.contains("poe.watch")) {
+				for (JsonElement jsonElement : parse.getAsJsonArray()) {
+					final ItemLookup itemLookup = GSON.fromJson(jsonElement, ItemLookup.class);
+					cache.put(itemLookup.getName(), itemLookup);
+				}
+				continue;
+			}
 
 			for (JsonElement line : parse.getAsJsonObject().getAsJsonArray("lines")) {
 				final ItemLookup item = GSON.fromJson(line, ItemLookup.class);
