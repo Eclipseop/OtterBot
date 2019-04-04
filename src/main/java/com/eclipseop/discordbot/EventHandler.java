@@ -62,17 +62,11 @@ public class EventHandler extends ListenerAdapter {
 
 	@Override
 	public void onGuildVoiceLeave(GuildVoiceLeaveEvent event) {
-		if (event.getMember().getUser().isBot()) return;
-		if (bot.getGuild().getAudioManager().getConnectedChannel().getMembers().size() == 1) {
-			bot.leaveVoice();
-		}
+		bot.handleLeaving(event);
 	}
 
 	@Override
 	public void onGuildVoiceMove(GuildVoiceMoveEvent event) {
-		if (event.getMember().getUser().isBot()) return;
-		if (bot.getGuild().getAudioManager().getConnectedChannel().getMembers().size() == 1) {
-			bot.leaveVoice();
-		}
+		bot.handleLeaving(event);
 	}
 }

@@ -5,6 +5,7 @@ import net.dv8tion.jda.core.AccountType;
 import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.JDABuilder;
 import net.dv8tion.jda.core.entities.*;
+import net.dv8tion.jda.core.events.guild.voice.GuildVoiceUpdateEvent;
 import net.dv8tion.jda.core.managers.AudioManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -43,6 +44,7 @@ public class Bot {
 
 		this.audioHandler = new AudioHandler(this);
 		jda.addEventListener(new EventHandler(this));
+		setRandomGame();
 	}
 
 	public Guild getGuild() {
@@ -95,6 +97,13 @@ public class Bot {
 		audioManager.closeAudioConnection();
 
 		return !audioManager.isConnected();
+	}
+
+	public void handleLeaving(GuildVoiceUpdateEvent event) {
+		if (event.getMember().getUser().isBot() || !getGuild().getAudioManager().isConnected()) return;
+		if (getGuild().getAudioManager().getConnectedChannel().getMembers().size() == 1) {
+			leaveVoice();
+		}
 	}
 
 	public void setGame(Game game) {
