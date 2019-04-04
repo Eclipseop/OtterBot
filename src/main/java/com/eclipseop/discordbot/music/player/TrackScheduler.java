@@ -43,6 +43,7 @@ public class TrackScheduler extends AudioEventAdapter {
 		final AudioTrack next = queue.poll();
 		if (next == null) {
 			player.destroy();
+			audioHandler.getBot().setRandomGame();
 			return;
 		}
 
