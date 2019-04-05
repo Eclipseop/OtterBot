@@ -49,7 +49,7 @@ public class MusicCommand extends Command {
 
 	@Override
 	public void execute(Message trigger) {
-		final VoiceChannel voiceChannel = getBot().getVoiceChannelFromUser(trigger.getAuthor());
+		final VoiceChannel voiceChannel = trigger.getMember().getVoiceState().getChannel();
 		if (voiceChannel == null) {
 			getBot().sendMessage("You are not currently in a voice channel!", trigger.getTextChannel());
 			return;

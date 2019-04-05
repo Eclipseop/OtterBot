@@ -12,7 +12,6 @@ import org.slf4j.LoggerFactory;
 
 import javax.security.auth.login.LoginException;
 import java.util.Random;
-import java.util.function.Predicate;
 
 /**
  * Created by Eclipseop.
@@ -47,11 +46,6 @@ public class Bot {
 		setRandomGame();
 	}
 
-	public Guild getGuild() {
-		// TODO: 3/28/2019 make dynamic, no longer requiring guild id
-		return jda.getGuildById(Bootstrap.getKEYS().GUILD);
-	}
-
 	public void sendMessage(String message, TextChannel textChannel) {
 		textChannel.sendMessage(message).queue();
 	}
@@ -64,22 +58,9 @@ public class Bot {
 		return audioHandler;
 	}
 
-	public VoiceChannel getVoiceChannelFromUser(Predicate<User> user) {
-		for (VoiceChannel voiceChannel : getGuild().getVoiceChannels()) {
-			if (voiceChannel.getMembers().stream().map(Member::getUser).anyMatch(user)) {
-				return voiceChannel;
-			}
-		}
-
-		return null;
-	}
-
-	public VoiceChannel getVoiceChannelFromUser(User user) {
-		return getVoiceChannelFromUser(user::equals);
-	}
-
 	public boolean joinVoiceChannel(final VoiceChannel voiceChannel) {
-		final AudioManager audioManager = getGuild().getAudioManager();
+		final AudioManager audioManager = voiceChannel.getGuild().getAudioManager();
+
 		audioManager.setSendingHandler(audioHandler.getGuildMusicManager().getSendHandler());
 		audioManager.openAudioConnection(voiceChannel);
 
@@ -92,17 +73,13 @@ public class Bot {
 		return audioManager.isAttemptingToConnect() || audioManager.isConnected();
 	}
 
-	public boolean leaveVoice() {
-		final AudioManager audioManager = getGuild().getAudioManager();
-		audioManager.closeAudioConnection();
-
-		return !audioManager.isConnected();
-	}
-
 	public void handleLeaving(GuildVoiceUpdateEvent event) {
-		if (event.getMember().getUser().isBot() || !getGuild().getAudioManager().isConnected()) return;
-		if (getGuild().getAudioManager().getConnectedChannel().getMembers().size() == 1) {
-			leaveVoice();
+		final Guild guild = event.getGuild();
+
+		if (event.getMember().getUser().isBot() || !guild.getAudioManager().isConnected()) return;
+		if (guild.getAudioManager().getConnectedChannel().getMembers().size() == 1) {
+			final AudioManager audioManager = guild.getAudioManager();
+			audioManager.closeAudioConnection();
 		}
 	}
 

@@ -5,8 +5,6 @@ package com.eclipseop.discordbot.util;
  * Date: 3/28/2019.
  */
 public class Key {
-
 	public String GOOGLE;
 	public String DISCORD;
-	public String GUILD;
 }
