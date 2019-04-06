@@ -35,9 +35,10 @@ public class MusicCommand extends Command {
 		}
 	}
 
+
 	@Override
 	public Predicate<String> getPrefixArg() {
-		return s -> s.equals("play") || s.equals("stop") || s.equals("skip");
+		return s -> s.equals("play") || s.equals("stop") || s.equals("skip") || s.equals("volume") || s.equals("earrape");
 	}
 
 	@Override
@@ -100,6 +101,16 @@ public class MusicCommand extends Command {
 				getBot().sendMessage("Skipping " + songName + ".", trigger.getTextChannel());
 
 				getBot().getAudioHandler().getGuildMusicManager().getScheduler().nextTrack();
+				break;
+			case "volume":
+				final int volume = Integer.parseInt(command.split(" ")[1]);
+				logger.info("Setting volume to" + volume);
+				getBot().getAudioHandler().getGuildMusicManager().getPlayer().setVolume(volume);
+				getBot().sendMessage("Setting volume to " + volume + ".", trigger.getTextChannel());
+				break;
+			case "earrape":
+				getBot().sendMessage("gottcha fam :ok_hand:", trigger.getTextChannel());
+				getBot().getAudioHandler().getGuildMusicManager().getPlayer().setVolume(250);
 				break;
 		}
 	}

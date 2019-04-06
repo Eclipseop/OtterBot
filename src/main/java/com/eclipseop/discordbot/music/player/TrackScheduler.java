@@ -41,6 +41,7 @@ public class TrackScheduler extends AudioEventAdapter {
 
 	public void nextTrack() {
 		final AudioTrack next = queue.poll();
+		player.setVolume(100);
 		if (next == null) {
 			player.destroy();
 			audioHandler.getBot().setRandomGame();
