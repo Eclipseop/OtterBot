@@ -13,7 +13,6 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.function.Predicate;
 import java.util.regex.Pattern;
 
 /**
@@ -35,17 +34,17 @@ public class MusicCommand extends Command {
 		}
 	}
 
-
 	@Override
-	public Predicate<String> getPrefixArg() {
-		return s -> s.equals("play") || s.equals("stop") || s.equals("skip") || s.equals("volume") || s.equals("earrape");
+	public String[] getPrefixArgs() {
+		return new String[]{"play", "stop", "skip", "volume", "earrape"};
 	}
 
 	@Override
 	public String getHelpText() {
 		return "`#play {url}`: Plays a specific video.\n" +
 				"`#play {text}`: Searches for a video with the given query.\n" +
-				"`#play {1-5}`: Plays a specific song from song selection.";
+				"`#play {1-5}`: Plays a specific song from song selection.\n" +
+				"`#volume {num}`: Sets the volume of the player. Will Reset after every song.";
 	}
 
 	@Override

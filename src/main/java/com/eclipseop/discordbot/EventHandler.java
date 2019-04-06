@@ -48,7 +48,8 @@ public class EventHandler extends ListenerAdapter {
 		logger.info("Processing args: " + Arrays.toString(args));
 
 		final TextChannel replyChannel = event.getChannel();
-		commands.stream().filter(p -> p.getPrefixArg().test(args[0])).findFirst().ifPresentOrElse(command -> {
+
+		commands.stream().filter(p -> Arrays.asList(p.getPrefixArgs()).contains(args[0])).findFirst().ifPresentOrElse(command -> {
 			if (args.length > 1 && args[1].equals("help")) {
 				bot.sendMessage(command.getHelpText(), replyChannel);
 			} else {

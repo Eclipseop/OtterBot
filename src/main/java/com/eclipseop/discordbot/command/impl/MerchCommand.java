@@ -11,7 +11,6 @@ import net.dv8tion.jda.core.entities.Message;
 
 import java.awt.*;
 import java.util.Comparator;
-import java.util.function.Predicate;
 
 /**
  * Created by Eclipseop.
@@ -24,8 +23,8 @@ public class MerchCommand extends Command {
 	}
 
 	@Override
-	public Predicate<String> getPrefixArg() {
-		return s -> s.equals("deal") || s.equals("price");
+	public String[] getPrefixArgs() {
+		return new String[]{"deal", "price"};
 	}
 
 	@Override
