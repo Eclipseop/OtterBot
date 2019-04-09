@@ -65,7 +65,7 @@ public class MusicCommand extends Command {
 				}
 				command = command.substring(5);
 
-				if (Pattern.matches("\\d", command.substring(0, 1))) {
+				if (command.length() == 1 && Pattern.matches("\\d", command)) {
 					getBot().getAudioHandler().loadSong(
 							"https://www.youtube.com/watch?v=" +
 									getBot()
