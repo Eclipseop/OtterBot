@@ -11,6 +11,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.security.auth.login.LoginException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 /**
@@ -22,8 +24,8 @@ public class Bot {
 	private static final Logger logger = LoggerFactory.getLogger(Bot.class);
 	private final Random random = new Random();
 
-	private AudioHandler audioHandler;
 	private JDA jda;
+	private Map<Guild, AudioHandler> audioHandlers = new HashMap<>();
 
 	private final Game[] games = {
 			Game.of(Game.GameType.WATCHING, "SmurfyValVal @ Chaturbate.com"),
@@ -41,7 +43,6 @@ public class Bot {
 				.setAutoReconnect(true)
 				.build();
 
-		this.audioHandler = new AudioHandler(this);
 		jda.addEventListener(new EventHandler(this));
 		setRandomGame();
 	}
@@ -54,14 +55,19 @@ public class Bot {
 		textChannel.sendMessage(messageEmbed).queue();
 	}
 
-	public AudioHandler getAudioHandler() {
+	public AudioHandler getAudioHandler(Guild guild) {
+		AudioHandler audioHandler;
+		if ((audioHandler = audioHandlers.get(guild)) == null) {
+			audioHandlers.put(guild, (audioHandler = new AudioHandler(this)));
+		}
+
 		return audioHandler;
 	}
 
 	public boolean joinVoiceChannel(final VoiceChannel voiceChannel) {
 		final AudioManager audioManager = voiceChannel.getGuild().getAudioManager();
 
-		audioManager.setSendingHandler(audioHandler.getGuildMusicManager().getSendHandler());
+		audioManager.setSendingHandler(getAudioHandler(voiceChannel.getGuild()).getGuildMusicManager().getSendHandler());
 		audioManager.openAudioConnection(voiceChannel);
 
 		try {
