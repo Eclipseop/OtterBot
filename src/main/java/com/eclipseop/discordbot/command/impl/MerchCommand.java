@@ -52,14 +52,14 @@ public class MerchCommand extends Command {
 							.sorted(Comparator.comparingDouble(Deal::getScore).reversed())
 							.limit(5)
 							.forEach(c -> {
-								String messageString = "Made with ";
+								StringBuilder messageString = new StringBuilder("Made with ");
 
 								for (Item regent : c.getRegents()) {
-									messageString += regent.getName() + "(" + regent.getQuantity() + ") ";
+									messageString.append(regent.getName()).append("(").append(regent.getQuantity()).append(") ");
 								}
 
-								messageString += ", Expected Profit of " + (c.getSellback() - c.getCost());
-								message.addField(c.getProduct().getName(), messageString, false);
+								messageString.append(", Expected Profit of ").append(c.getSellback() - c.getCost());
+								message.addField(c.getProduct().getName(), messageString.toString(), false);
 							});
 
 				} else {
