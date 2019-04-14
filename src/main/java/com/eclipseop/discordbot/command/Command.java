@@ -1,7 +1,7 @@
 package com.eclipseop.discordbot.command;
 
 import com.eclipseop.discordbot.Bot;
-import net.dv8tion.jda.core.entities.Message;
+import net.dv8tion.jda.api.entities.Message;
 
 /**
  * Created by Eclipseop.

@@ -6,8 +6,8 @@ import com.eclipseop.discordbot.poe.Deal;
 import com.eclipseop.discordbot.poe.FindDeals;
 import com.eclipseop.discordbot.poe.Item;
 import com.eclipseop.discordbot.poe.ItemLookup;
-import net.dv8tion.jda.core.EmbedBuilder;
-import net.dv8tion.jda.core.entities.Message;
+import net.dv8tion.jda.api.EmbedBuilder;
+import net.dv8tion.jda.api.entities.Message;
 
 import java.awt.*;
 import java.util.Comparator;

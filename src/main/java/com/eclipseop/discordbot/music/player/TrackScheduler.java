@@ -4,7 +4,7 @@ import com.sedmelluq.discord.lavaplayer.player.AudioPlayer;
 import com.sedmelluq.discord.lavaplayer.player.event.AudioEventAdapter;
 import com.sedmelluq.discord.lavaplayer.track.AudioTrack;
 import com.sedmelluq.discord.lavaplayer.track.AudioTrackEndReason;
-import net.dv8tion.jda.core.entities.Game;
+import net.dv8tion.jda.api.entities.Activity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -44,7 +44,7 @@ public class TrackScheduler extends AudioEventAdapter {
 		player.setVolume(100);
 		if (next == null) {
 			player.destroy();
-			audioHandler.getBot().setRandomGame();
+			audioHandler.getBot().setRandomActivity();
 			return;
 		}
 
@@ -63,7 +63,7 @@ public class TrackScheduler extends AudioEventAdapter {
 			}
 		}).start();
 
-		audioHandler.getBot().setGame(Game.of(Game.GameType.LISTENING, "[Music] " + next.getInfo().title));
+		audioHandler.getBot().setActivity(Activity.of(Activity.ActivityType.LISTENING, "[Music] " + next.getInfo().title));
 	}
 
 	@Override
@@ -75,7 +75,7 @@ public class TrackScheduler extends AudioEventAdapter {
 				nextTrack();
 			} else {
 				logger.info("Queue Empty");
-				audioHandler.getBot().setRandomGame();
+				audioHandler.getBot().setRandomActivity();
 			}
 		}
 
@@ -100,7 +100,7 @@ public class TrackScheduler extends AudioEventAdapter {
 	public void clearQueueAndStop() {
 		queue.clear();
 		nextTrack();
-		audioHandler.getBot().setRandomGame();
+		audioHandler.getBot().setRandomActivity();
 	}
 
 	public Queue<AudioTrack> getQueue() {
