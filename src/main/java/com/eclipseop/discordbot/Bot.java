@@ -85,6 +85,7 @@ public class Bot {
 		if (event.getMember().getUser().isBot() || !guild.getAudioManager().isConnected()) return;
 		if (guild.getAudioManager().getConnectedChannel().getMembers().size() == 1) {
 			final AudioManager audioManager = guild.getAudioManager();
+			setRandomActivity();
 			audioManager.closeAudioConnection();
 		}
 	}
