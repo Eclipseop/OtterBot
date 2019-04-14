@@ -6,12 +6,7 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.core.config.Configurator;
 
 import javax.security.auth.login.LoginException;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
 import java.io.InputStreamReader;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.Scanner;
 
 /**
@@ -29,12 +24,7 @@ public class Bootstrap {
 	public static void main(String[] args) {
 		Configurator.setRootLevel(Level.DEBUG);
 
-		try {
-			final String path = new File("src/main/java/com/eclipseop/discordbot/util/Keys.json").getAbsolutePath();
-			KEYS = new Gson().fromJson(new BufferedReader(new InputStreamReader(Files.newInputStream(Paths.get(path)))), Key.class);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		KEYS = new Gson().fromJson(new InputStreamReader(Bootstrap.class.getClassLoader().getResourceAsStream("Keys.json")), Key.class);
 
 		try {
 			final Bot bot = new Bot();

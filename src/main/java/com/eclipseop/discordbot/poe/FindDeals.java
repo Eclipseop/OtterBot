@@ -1,5 +1,6 @@
 package com.eclipseop.discordbot.poe;
 
+import com.eclipseop.discordbot.Bootstrap;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
@@ -8,13 +9,10 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
@@ -26,8 +24,6 @@ import java.util.stream.Collectors;
  * Date: 3/25/2019.
  */
 public class FindDeals {
-
-	public static String FILE_PATH;
 
 	private static final String[] API_LINKS = {
 			"https://poe.ninja/api/data/currencyoverview?league=Synthesis&type=Currency",
@@ -56,13 +52,7 @@ public class FindDeals {
 	private static PossibleDeal[] possibleDeals;
 
 	static {
-		try {
-			FILE_PATH = new File("src/main/java/com/eclipseop/discordbot/util/DealData.json").getAbsolutePath();
-
-			possibleDeals = GSON.fromJson(new BufferedReader(new InputStreamReader(Files.newInputStream(Paths.get(FILE_PATH)))), PossibleDeal[].class);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		possibleDeals = GSON.fromJson(new InputStreamReader(Bootstrap.class.getClassLoader().getResourceAsStream("DealData.json")), PossibleDeal[].class);
 	}
 
 	public static ItemLookup getItem(String itemName) {
