@@ -22,7 +22,7 @@ public class Bootstrap {
 
 	private static Key KEYS;
 
-	public static Key getKEYS() {
+	public static Key getKeys() {
 		return KEYS;
 	}
 
