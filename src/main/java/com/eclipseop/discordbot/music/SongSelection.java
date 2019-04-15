@@ -12,7 +12,7 @@ import java.awt.*;
  */
 public class SongSelection {
 
-	private SearchResult[] results;
+	private final SearchResult[] results;
 
 	public SongSelection(SearchResult[] results) {
 		this.results = results;

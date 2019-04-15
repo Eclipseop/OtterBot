@@ -24,8 +24,8 @@ public class Bot {
 	private static final Logger logger = LoggerFactory.getLogger(Bot.class);
 	private final Random random = new Random();
 
-	private JDA jda;
-	private Map<Guild, AudioHandler> audioHandlers = new HashMap<>();
+	private final JDA jda;
+	private final Map<Guild, AudioHandler> audioHandlers = new HashMap<>();
 
 	private final Activity[] activities = {
 			Activity.of(Activity.ActivityType.WATCHING, "SmurfyValVal @ Chaturbate.com"),

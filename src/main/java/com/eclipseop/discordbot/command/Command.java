@@ -9,7 +9,7 @@ import net.dv8tion.jda.api.entities.Message;
  */
 public abstract class Command {
 
-	private Bot bot;
+	private final Bot bot;
 
 	public Command(Bot bot) {
 		this.bot = bot;

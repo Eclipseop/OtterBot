@@ -23,8 +23,8 @@ public class EventHandler extends ListenerAdapter {
 
 	private static final Logger logger = LoggerFactory.getLogger(EventHandler.class);
 
-	private Bot bot;
-	private List<Command> commands = new ArrayList<>();
+	private final Bot bot;
+	private final List<Command> commands = new ArrayList<>();
 
 	public EventHandler(Bot bot) {
 		this.bot = bot;

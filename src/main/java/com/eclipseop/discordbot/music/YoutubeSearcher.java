@@ -1,9 +1,7 @@
 package com.eclipseop.discordbot.music;
 
 import com.eclipseop.discordbot.Bootstrap;
-import com.google.api.client.http.HttpTransport;
 import com.google.api.client.http.javanet.NetHttpTransport;
-import com.google.api.client.json.JsonFactory;
 import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.services.youtube.YouTube;
 import com.google.api.services.youtube.model.SearchResult;
@@ -19,15 +17,12 @@ import java.util.List;
  */
 public class YoutubeSearcher {
 
-	private final HttpTransport HTTP_TRANSPORT = new NetHttpTransport();
-	private final JsonFactory JSON_FACTORY = new JacksonFactory();
-
-	private YouTube.Search.List search;
+	private final YouTube.Search.List search;
 
 	private static final Logger logger = LoggerFactory.getLogger(YoutubeSearcher.class);
 
 	public YoutubeSearcher() throws IOException {
-		final YouTube builder = new YouTube.Builder(HTTP_TRANSPORT, JSON_FACTORY, httpRequest -> {
+		final YouTube builder = new YouTube.Builder(new NetHttpTransport(), new JacksonFactory(), httpRequest -> {
 		}).build();
 
 		search = builder.search().list("id,snippet");

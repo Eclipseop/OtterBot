@@ -49,7 +49,7 @@ public class FindDeals {
 					return cache.get(key);
 				}
 			});
-	private static PossibleDeal[] possibleDeals;
+	private static final PossibleDeal[] possibleDeals;
 
 	static {
 		possibleDeals = GSON.fromJson(new InputStreamReader(Bootstrap.class.getClassLoader().getResourceAsStream("DealData.json")), PossibleDeal[].class);

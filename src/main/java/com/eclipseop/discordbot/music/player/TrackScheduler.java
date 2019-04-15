@@ -16,7 +16,7 @@ import java.util.*;
  */
 public class TrackScheduler extends AudioEventAdapter {
 
-	private boolean repeating = false;
+	private boolean repeating;
 	private final Queue<AudioTrack> queue;
 	private final AudioPlayer player;
 	private final AudioHandler audioHandler;
