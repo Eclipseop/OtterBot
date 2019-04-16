@@ -98,7 +98,7 @@ public class Bot {
 		setActivity(activities[random.nextInt(activities.length)]);
 	}
 
-	public void setRandomGame() {
-		setGame(games[random.nextInt(games.length)]);
+	public JDA getJda() {
+		return jda;
 	}
 }

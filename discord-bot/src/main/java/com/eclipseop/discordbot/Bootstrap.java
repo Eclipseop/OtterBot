@@ -32,8 +32,13 @@ public class Bootstrap {
 			new Thread(() -> {
 				final Scanner scanner = new Scanner(System.in);
 				while (true) {
-					if (scanner.nextLine().equals("stop")) {
+					final String line = scanner.nextLine();
+					if (line.equals("stop")) {
 						System.exit(0);
+					} else {
+						bot.getJda().getGuilds().forEach(c -> {
+							bot.sendMessage("[ADMIN]: " + line, c.getDefaultChannel());
+						});
 					}
 
 					try {

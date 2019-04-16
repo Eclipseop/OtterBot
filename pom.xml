@@ -6,6 +6,7 @@
 
     <groupId>groupId</groupId>
     <artifactId>OtterBot</artifactId>
+    <packaging>pom</packaging>
     <version>1.1</version>
     <build>
         <plugins>
@@ -42,6 +43,10 @@
             </plugin>
         </plugins>
     </build>
+    <modules>
+        <module>admin-panel</module>
+        <module>discord-bot</module>
+    </modules>
 
     <dependencies>
         <dependency>
