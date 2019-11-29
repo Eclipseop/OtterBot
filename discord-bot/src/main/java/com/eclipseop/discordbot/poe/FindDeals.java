@@ -26,23 +26,23 @@ import java.util.stream.Collectors;
 public class FindDeals {
 
 	private static final String[] API_LINKS = {
-			"https://poe.ninja/api/data/currencyoverview?league=Synthesis&type=Currency",
-			"https://api.poe.watch/get?league=Synthesis&category=card",
-			"https://poe.ninja/api/data/itemoverview?league=Synthesis&type=UniqueArmour",
-			"https://poe.ninja/api/data/itemoverview?league=Synthesis&type=UniqueAccessory",
-			"https://poe.ninja/api/data/itemoverview?league=Synthesis&type=Prophecy",
-			"https://poe.ninja/api/data/itemoverview?league=Synthesis&type=UniqueMap",
-			"https://poe.ninja/api/data/itemoverview?league=Synthesis&type=UniqueFlask",
-			"https://poe.ninja/api/data/itemoverview?league=Synthesis&type=UniqueWeapon",
-			"https://poe.ninja/api/data/itemoverview?league=Synthesis&type=UniqueJewel",
-			"https://poe.ninja/api/data/itemoverview?league=Synthesis&type=SkillGem",
-			"https://poe.ninja/api/data/currencyoverview?league=Synthesis&type=Fragment"
+			"https://poe.ninja/api/data/currencyoverview?league=Blight&type=Currency",
+			"https://api.poe.watch/get?league=Blight&category=card",
+			"https://poe.ninja/api/data/itemoverview?league=Blight&type=UniqueArmour",
+			"https://poe.ninja/api/data/itemoverview?league=Blight&type=UniqueAccessory",
+			"https://poe.ninja/api/data/itemoverview?league=Blight&type=Prophecy",
+			"https://poe.ninja/api/data/itemoverview?league=Blight&type=UniqueMap",
+			"https://poe.ninja/api/data/itemoverview?league=Blight&type=UniqueFlask",
+			"https://poe.ninja/api/data/itemoverview?league=Blight&type=UniqueWeapon",
+			"https://poe.ninja/api/data/itemoverview?league=Blight&type=UniqueJewel",
+			"https://poe.ninja/api/data/itemoverview?league=Blight&type=SkillGem",
+			"https://poe.ninja/api/data/currencyoverview?league=Blight&type=Fragment"
 	};
 
 	private static final Gson GSON = new Gson();
 	private static final LoadingCache<String, ItemLookup> cache = CacheBuilder.newBuilder()
 			.expireAfterWrite(30, TimeUnit.MINUTES)
-			.build(new CacheLoader<>() {
+			.build(new CacheLoader<String, ItemLookup>() {
 				@Override
 				public ItemLookup load(String key) throws Exception {
 					repopulateCache();

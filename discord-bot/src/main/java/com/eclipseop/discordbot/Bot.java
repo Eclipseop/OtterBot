@@ -4,6 +4,7 @@ import com.eclipseop.discordbot.music.player.AudioHandler;
 import net.dv8tion.jda.api.AccountType;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
+import net.dv8tion.jda.api.OnlineStatus;
 import net.dv8tion.jda.api.entities.*;
 import net.dv8tion.jda.api.events.guild.voice.GuildVoiceUpdateEvent;
 import net.dv8tion.jda.api.managers.AudioManager;
@@ -22,29 +23,18 @@ import java.util.Random;
 public class Bot {
 
 	private static final Logger logger = LoggerFactory.getLogger(Bot.class);
-	private final Random random = new Random();
 
 	private final JDA jda;
 	private final Map<Guild, AudioHandler> audioHandlers = new HashMap<>();
-
-	private final Activity[] activities = {
-			Activity.of(Activity.ActivityType.WATCHING, "SmurfyValVal @ Chaturbate.com"),
-			Activity.of(Activity.ActivityType.STREAMING, "Call with Tyler"),
-			Activity.of(Activity.ActivityType.WATCHING, "Hyink grow up"),
-			Activity.of(Activity.ActivityType.WATCHING, "Free movies on 123freemovies.com"),
-			Activity.of(Activity.ActivityType.WATCHING, "♂ Boy ♂ Band ♂ Catalina ♂"),
-			Activity.of(Activity.ActivityType.LISTENING, "Weed-Smoking ASMR"),
-			Activity.of(Activity.ActivityType.STREAMING, "You've been gnomed")
-	};
 
 	public Bot() throws LoginException {
 		this.jda = new JDABuilder(AccountType.BOT)
 				.setToken(Bootstrap.getKeys().DISCORD)
 				.setAutoReconnect(true)
+				.setActivity(Activity.playing("#help for commands!"))
 				.build();
 
 		jda.addEventListener(new EventHandler(this));
-		setRandomActivity();
 	}
 
 	public void sendMessage(String message, TextChannel textChannel) {
@@ -85,17 +75,8 @@ public class Bot {
 		if (event.getEntity().getUser().isBot() || !guild.getAudioManager().isConnected()) return;
 		if (guild.getAudioManager().getConnectedChannel().getMembers().size() == 1) {
 			final AudioManager audioManager = guild.getAudioManager();
-			setRandomActivity();
 			audioManager.closeAudioConnection();
 		}
-	}
-
-	public void setActivity(Activity activity) {
-		jda.getPresence().setActivity(activity);
-	}
-
-	public void setRandomActivity() {
-		setActivity(activities[random.nextInt(activities.length)]);
 	}
 
 	public JDA getJda() {

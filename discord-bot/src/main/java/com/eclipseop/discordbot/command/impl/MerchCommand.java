@@ -24,14 +24,14 @@ public class MerchCommand extends Command {
 
 	@Override
 	public String[] getPrefixArgs() {
-		return new String[]{"deal", "price"};
+		return new String[]{/*"deal",*/ "price"};
 	}
 
 	@Override
 	public String getHelpText() {
-		return "`#price {item name}`: Returns the item price.\n" +
+		return "`#price {item name}`: Returns the item price.\n"; /*+
 				"`#deal {chaos}`: Returns all possible deals within X chaos.\n" +
-				"`#deal {item name}`: Returns information regarding a specific deal. This is the item itself, not the div card.";
+				"`#deal {item name}`: Returns information regarding a specific deal. This is the item itself, not the div card.";*/
 	}
 
 	@Override
@@ -41,6 +41,7 @@ public class MerchCommand extends Command {
 		EmbedBuilder message = new EmbedBuilder();
 		message.setColor(Color.ORANGE);
 		switch (command.split(" ")[0]) {
+			/*
 			case "deal":
 				command = command.substring(5);
 
@@ -75,6 +76,8 @@ public class MerchCommand extends Command {
 					}
 				}
 				break;
+
+			 */
 			case "price":
 				ItemLookup item = FindDeals.getItem(command.replace("price ", ""));
 

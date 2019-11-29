@@ -6,6 +6,7 @@ import com.eclipseop.discordbot.music.SongSelection;
 import com.eclipseop.discordbot.music.YoutubeSearcher;
 import com.eclipseop.discordbot.music.player.AudioHandler;
 import com.google.api.services.youtube.model.SearchResult;
+import com.sedmelluq.discord.lavaplayer.track.AudioTrack;
 import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.entities.TextChannel;
@@ -38,7 +39,7 @@ public class MusicCommand extends Command {
 
 	@Override
 	public String[] getPrefixArgs() {
-		return new String[]{"play", "stop", "skip", "volume", "earrape"};
+		return new String[]{"play", "stop", "skip", "volume", "earrape", "playing"};
 	}
 
 	@Override
@@ -46,7 +47,8 @@ public class MusicCommand extends Command {
 		return "`#play {url}`: Plays a specific video.\n" +
 				"`#play {text}`: Searches for a video with the given query.\n" +
 				"`#play {1-5}`: Plays a specific song from song selection.\n" +
-				"`#volume {num}`: Sets the volume of the player. Will Reset after every song.";
+				"`#volume {num}`: Sets the volume of the player. Will Reset after every song.\n" +
+				"`#playing`: Shows the current song.";
 	}
 
 	@Override
@@ -70,20 +72,26 @@ public class MusicCommand extends Command {
 				}
 				command = command.substring(5);
 
+				final SongSelection selectionByUser = audioHandler.getCacheSelector().get(trigger.getAuthor());
+
 				if (command.length() == 1 && Pattern.matches("\\d", command)) {
+					if (selectionByUser == null) {
+						getBot().sendMessage("No Song Selector!", textChannel);
+						return;
+					}
+
 					audioHandler.loadSong(
 							"https://www.youtube.com/watch?v=" +
-									audioHandler
-											.getCacheSelector()
-											.get(trigger.getAuthor())
+									selectionByUser
 											.getResults()[Integer.parseInt(command.substring(0, 1)) - 1]
 											.getId()
 											.getVideoId(),
 							textChannel
 					);
+					audioHandler.getCacheSelector().remove(trigger.getAuthor());
 					return;
 				} else if (command.startsWith("http")) {
-					audioHandler.loadSong(command);
+					audioHandler.loadSong(command, textChannel);
 					return;
 				}
 
@@ -114,6 +122,14 @@ public class MusicCommand extends Command {
 			case "earrape":
 				getBot().sendMessage("gottcha fam :ok_hand:", textChannel);
 				audioHandler.getGuildMusicManager().getPlayer().setVolume(250);
+				break;
+			case "playing":
+				final AudioTrack current = audioHandler.getGuildMusicManager().getPlayer().getPlayingTrack();
+				if (current == null) {
+					getBot().sendMessage("Currently not playing!", textChannel);
+				} else {
+					getBot().sendMessage("Playing: " + current.getInfo().title, textChannel);
+				}
 				break;
 		}
 	}

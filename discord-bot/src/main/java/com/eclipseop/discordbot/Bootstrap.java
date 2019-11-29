@@ -16,18 +16,24 @@ import java.util.Scanner;
 public class Bootstrap {
 
 	private static Key KEYS;
+	private static Bot bot;
+
+	public static Bot getBot() {
+		return bot;
+	}
 
 	public static Key getKeys() {
 		return KEYS;
 	}
 
-	public static void main(String[] args) {
+	public static void main(String... args) {
 		Configurator.setRootLevel(Level.DEBUG);
 
 		KEYS = new Gson().fromJson(new InputStreamReader(Bootstrap.class.getClassLoader().getResourceAsStream("Keys.json")), Key.class);
 
 		try {
 			final Bot bot = new Bot();
+			Bootstrap.bot = bot;
 
 			new Thread(() -> {
 				final Scanner scanner = new Scanner(System.in);

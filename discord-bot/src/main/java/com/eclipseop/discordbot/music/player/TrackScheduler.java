@@ -44,7 +44,6 @@ public class TrackScheduler extends AudioEventAdapter {
 		player.setVolume(100);
 		if (next == null) {
 			player.destroy();
-			audioHandler.getBot().setRandomActivity();
 			return;
 		}
 
@@ -62,8 +61,6 @@ public class TrackScheduler extends AudioEventAdapter {
 				audioHandler.loadSong(next.getInfo().uri);
 			}
 		}).start();
-
-		audioHandler.getBot().setActivity(Activity.of(Activity.ActivityType.LISTENING, "[Music] " + next.getInfo().title));
 	}
 
 	@Override
@@ -75,7 +72,6 @@ public class TrackScheduler extends AudioEventAdapter {
 				nextTrack();
 			} else {
 				logger.info("Queue Empty");
-				audioHandler.getBot().setRandomActivity();
 			}
 		}
 
@@ -100,7 +96,6 @@ public class TrackScheduler extends AudioEventAdapter {
 	public void clearQueueAndStop() {
 		queue.clear();
 		nextTrack();
-		audioHandler.getBot().setRandomActivity();
 	}
 
 	public Queue<AudioTrack> getQueue() {
