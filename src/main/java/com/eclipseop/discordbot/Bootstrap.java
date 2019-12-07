@@ -2,8 +2,6 @@ package com.eclipseop.discordbot;
 
 import com.eclipseop.discordbot.util.Key;
 import com.google.gson.Gson;
-import org.apache.logging.log4j.Level;
-import org.apache.logging.log4j.core.config.Configurator;
 
 import javax.security.auth.login.LoginException;
 import java.io.InputStreamReader;
@@ -27,7 +25,6 @@ public class Bootstrap {
 	}
 
 	public static void main(String... args) {
-		Configurator.setRootLevel(Level.DEBUG);
 
 		KEYS = new Gson().fromJson(new InputStreamReader(Bootstrap.class.getClassLoader().getResourceAsStream("Keys.json")), Key.class);
 
