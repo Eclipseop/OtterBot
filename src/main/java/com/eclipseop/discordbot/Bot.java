@@ -28,7 +28,7 @@ public class Bot {
 
 	public Bot() throws LoginException {
 		this.jda = new JDABuilder(AccountType.BOT)
-				.setToken(Bootstrap.getKeys().DISCORD)
+				.setToken(Bootstrap.getKeys().getDiscordKey())
 				.setAutoReconnect(true)
 				.setActivity(Activity.playing("#help for commands!"))
 				.build();

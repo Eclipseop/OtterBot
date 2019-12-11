@@ -26,7 +26,11 @@ public class Bootstrap {
 
 	public static void main(String... args) {
 
-		KEYS = new Gson().fromJson(new InputStreamReader(Bootstrap.class.getClassLoader().getResourceAsStream("Keys.json")), Key.class);
+		if (args.length != 2) {
+			System.out.println("Please pass google and discord key, in that order.");
+			return;
+		}
+		KEYS = new Key(args[0], args[1]);
 
 		try {
 			final Bot bot = new Bot();

@@ -30,7 +30,7 @@ public class YoutubeSearcher {
 
 	public List<SearchResult> search(String query) {
 		try {
-			search.setKey(Bootstrap.getKeys().GOOGLE);
+			search.setKey(Bootstrap.getKeys().getGoogleKey());
 			search.setQ(query);
 			search.setType("video");
 			search.setFields("items(id/kind,id/videoId,snippet/title,snippet/thumbnails/default/url)");

@@ -5,6 +5,19 @@ package com.eclipseop.discordbot.util;
  * Date: 3/28/2019.
  */
 public class Key {
-	public String GOOGLE;
-	public String DISCORD;
+	private final String googleKey;
+	private final String discordKey;
+
+	public Key(String googleKey, String discordKey) {
+		this.googleKey = googleKey;
+		this.discordKey = discordKey;
+	}
+
+	public String getDiscordKey() {
+		return discordKey;
+	}
+
+	public String getGoogleKey() {
+		return googleKey;
+	}
 }
