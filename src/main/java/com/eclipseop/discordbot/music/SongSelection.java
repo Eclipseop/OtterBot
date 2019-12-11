@@ -28,7 +28,7 @@ public class SongSelection {
 		message.setTitle("Search Results");
 		for (int i = 0; i < results.length; i++) {
 			SearchResult result = results[i];
-			message.addField(i + 1 + "", result.getSnippet().getTitle().replace("&quot;", ""), true);
+			message.addField(i + 1 + "", result.getSnippet().getTitle().replace("&quot;", ""), false);
 		}
 		message.setThumbnail(results[0].getSnippet().getThumbnails().getDefault().getUrl());
 		message.setColor(Color.YELLOW);
