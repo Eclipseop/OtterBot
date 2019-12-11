@@ -30,7 +30,8 @@ public class HelpCommand extends Command {
 		if (split.length == 1) {
 			getBot().sendMessage("Available Help Commands `#help {command}`:\n" +
 					"`music`\n" +
-					"`poe`", textChannel);
+					"`poe`\n" +
+					"`stats`", textChannel);
 		} else {
 			// TODO: 11/29/2019 lmao what
 			switch (split[1]) {
@@ -39,6 +40,9 @@ public class HelpCommand extends Command {
 					break;
 				case "poe":
 					getBot().sendMessage(new MerchCommand(null).getHelpText(), textChannel);
+					break;
+				case "stats":
+					getBot().sendMessage(new StatCommand(null).getHelpText(), textChannel);
 					break;
 				default:
 					getBot().sendMessage("Invalid help command.", textChannel);

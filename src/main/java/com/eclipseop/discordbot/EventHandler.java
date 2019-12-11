@@ -4,6 +4,7 @@ import com.eclipseop.discordbot.command.Command;
 import com.eclipseop.discordbot.command.impl.HelpCommand;
 import com.eclipseop.discordbot.command.impl.MerchCommand;
 import com.eclipseop.discordbot.command.impl.MusicCommand;
+import com.eclipseop.discordbot.command.impl.StatCommand;
 import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.TextChannel;
 import net.dv8tion.jda.api.entities.User;
@@ -37,6 +38,7 @@ public class EventHandler extends ListenerAdapter {
 		commands.add(new MusicCommand(bot));
 		commands.add(new MerchCommand(bot));
 		commands.add(new HelpCommand(bot));
+		commands.add(new StatCommand(bot));
 	}
 
 	@Override
