@@ -25,36 +25,15 @@ public class Bootstrap {
 	}
 
 	public static void main(String... args) {
-
 		if (args.length != 2) {
 			System.out.println("Please pass google and discord key, in that order.");
 			return;
 		}
 		KEYS = new Key(args[0], args[1]);
+		System.out.println("Reading keys as " + KEYS);
 
 		try {
-			final Bot bot = new Bot();
-			Bootstrap.bot = bot;
-
-			new Thread(() -> {
-				final Scanner scanner = new Scanner(System.in);
-				while (true) {
-					final String line = scanner.nextLine();
-					if (line.equals("stop")) {
-						System.exit(0);
-					} else {
-						bot.getJda().getGuilds().forEach(c -> {
-							bot.sendMessage("[ADMIN]: " + line, c.getDefaultChannel());
-						});
-					}
-
-					try {
-						Thread.sleep(250);
-					} catch (InterruptedException e) {
-						e.printStackTrace();
-					}
-				}
-			}).start();
+			Bootstrap.bot = new Bot();
 		} catch (LoginException e) {
 			e.printStackTrace();
 		}

@@ -20,4 +20,12 @@ public class Key {
 	public String getGoogleKey() {
 		return googleKey;
 	}
+
+	@Override
+	public String toString() {
+		return "Key{" +
+				"googleKey='" + googleKey + '\'' +
+				", discordKey='" + discordKey + '\'' +
+				'}';
+	}
 }
