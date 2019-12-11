@@ -4,11 +4,12 @@ import com.sedmelluq.discord.lavaplayer.player.AudioPlayer;
 import com.sedmelluq.discord.lavaplayer.player.event.AudioEventAdapter;
 import com.sedmelluq.discord.lavaplayer.track.AudioTrack;
 import com.sedmelluq.discord.lavaplayer.track.AudioTrackEndReason;
-import net.dv8tion.jda.api.entities.Activity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.*;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Created by Eclipseop.
@@ -17,7 +18,7 @@ import java.util.*;
 public class TrackScheduler extends AudioEventAdapter {
 
 	private boolean repeating;
-	private final Queue<AudioTrack> queue;
+	private final LinkedList<AudioTrack> queue;
 	private final AudioPlayer player;
 	private final AudioHandler audioHandler;
 
@@ -98,7 +99,7 @@ public class TrackScheduler extends AudioEventAdapter {
 		nextTrack();
 	}
 
-	public Queue<AudioTrack> getQueue() {
+	public LinkedList<AudioTrack> getQueue() {
 		return queue;
 	}
 }

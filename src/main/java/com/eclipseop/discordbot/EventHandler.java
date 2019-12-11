@@ -90,5 +90,9 @@ public class EventHandler extends ListenerAdapter {
 	@Override
 	public void onReady(@Nonnull ReadyEvent event) {
 		bot.sendMessage("OtterBot is back online!", event.getJDA().getTextChannelById("405168846283079692"));
+
+		bot.getJda().getGuilds().forEach(guild -> {
+			System.out.println(guild.getName() + " - " + guild.getOwner().getUser().getAsTag());
+		});
 	}
 }

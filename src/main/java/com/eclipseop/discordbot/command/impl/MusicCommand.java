@@ -7,6 +7,7 @@ import com.eclipseop.discordbot.music.YoutubeSearcher;
 import com.eclipseop.discordbot.music.player.AudioHandler;
 import com.google.api.services.youtube.model.SearchResult;
 import com.sedmelluq.discord.lavaplayer.track.AudioTrack;
+import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.entities.TextChannel;
@@ -15,6 +16,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.regex.Pattern;
 
@@ -48,7 +50,12 @@ public class MusicCommand extends Command {
 				"`#m play {text}`: Searches for a video with the given query.\n" +
 				"`#m play {1-5}`: Plays a specific song from song selection.\n" +
 				"`#m volume {num}`: Sets the volume of the player. Will Reset after every song.\n" +
-				"`#m playing`: Shows the current song.";
+				"`#m playing`: Shows the current song.\n" +
+				"`#m skip`: Skips the current song.\n" +
+				"`#m stop`: Stops all playback and clears the queue.\n" +
+				"`#m queue`: Shows the top 5 songs in the queue.\n" +
+				"`#m remove {1-5}`: Removes the nth song from the queue.\n" +
+				"`#m earrape`: Turns on *earrape* for the current song.\n";
 	}
 
 	@Override
@@ -63,6 +70,7 @@ public class MusicCommand extends Command {
 		}
 		String command = trigger.getContentRaw().substring(3);
 
+		LinkedList<AudioTrack> queue = audioHandler.getGuildMusicManager().getScheduler().getQueue();
 		switch (command.split(" ")[0]) {
 			case "play":
 				if (!getBot().joinVoiceChannel(voiceChannel)) {
@@ -130,6 +138,36 @@ public class MusicCommand extends Command {
 				} else {
 					getBot().sendMessage("Playing: " + current.getInfo().title, textChannel);
 				}
+				break;
+			case "queue":
+				if (queue.size() == 0) {
+					getBot().sendMessage("No songs are currently in the queue.", textChannel);
+					return;
+				}
+
+				EmbedBuilder embedBuilder = new EmbedBuilder();
+
+				String songs = "";
+				for (int i = 0; i < 5; i++) {
+					try {
+						AudioTrack audioTrack = queue.get(i);
+						songs += (i + 1) + " - " + audioTrack.getInfo().title + "\n";
+					} catch (IndexOutOfBoundsException e) {
+						break;
+					}
+				}
+				embedBuilder.addField("Queue (showing top 5)", songs, false);
+				getBot().sendMessage(embedBuilder.build(), textChannel);
+				break;
+			case "remove":
+				int index = Integer.parseInt(command.split(" ")[1]);
+				if (queue.size() < index) {
+					getBot().sendMessage("Error removing song, index too large!", textChannel);
+					return;
+				}
+				AudioTrack audioTrack = queue.get(index - 1);
+				queue.remove(audioTrack);
+				getBot().sendMessage("Removed " + audioTrack.getInfo().title + " from the queue.", textChannel);
 				break;
 		}
 	}
