@@ -55,6 +55,7 @@ public class MusicCommand extends Command {
 				"`#m stop`: Stops all playback and clears the queue.\n" +
 				"`#m queue`: Shows the top 5 songs in the queue.\n" +
 				"`#m remove {1-5}`: Removes the nth song from the queue.\n" +
+				"`#m playing`: Shows the current song playing.\n" +
 				"`#m earrape`: Turns on *earrape* for the current song.\n";
 	}
 
