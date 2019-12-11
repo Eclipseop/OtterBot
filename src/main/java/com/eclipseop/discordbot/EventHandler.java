@@ -64,30 +64,18 @@ public class EventHandler extends ListenerAdapter {
 		final String[] args = stringContent.split(" ");
 		logger.info("Processing args: " + Arrays.toString(args));
 
-		final Command command1 = commands.stream().filter(p -> Arrays.asList(p.getPrefixArgs()).contains(args[0])).findFirst().orElse(null);
-		if (command1 != null) {
-			if (args.length > 1 && args[1].equals("help")) {
-				bot.sendMessage(command1.getHelpText(), replyChannel);
-			} else {
-				command1.execute(event.getMessage());
-			}
-		} else {
-			logger.debug("Received unknown arg[0] of " + args[0]);
-			bot.sendMessage(String.format("**Unknown command:** `%s`", args[0]), replyChannel);
-		}
-		/*
-		commands.stream().filter(p -> Arrays.asList(p.getPrefixArgs()).contains(args[0])).findFirst().ifPresentOrElse(command -> {
+		Command command = commands.stream().filter(p -> p.getPrefix().equalsIgnoreCase(args[0])).findFirst().orElse(null);
+		if (command != null) {
 			if (args.length > 1 && args[1].equals("help")) {
 				bot.sendMessage(command.getHelpText(), replyChannel);
 			} else {
 				command.execute(event.getMessage());
 			}
-		}, () -> {
+			command.execute(event.getMessage());
+		} else {
 			logger.debug("Received unknown arg[0] of " + args[0]);
 			bot.sendMessage(String.format("**Unknown command:** `%s`", args[0]), replyChannel);
-		});
-
-		 */
+		}
 	}
 
 	@Override

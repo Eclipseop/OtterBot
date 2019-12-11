@@ -20,13 +20,13 @@ public class MerchCommand extends Command {
 	}
 
 	@Override
-	public String[] getPrefixArgs() {
-		return new String[]{/*"deal",*/ "price"};
+	public String getPrefix() {
+		return "p";
 	}
 
 	@Override
 	public String getHelpText() {
-		return "`#price {item name}`: Returns the item price.\n"; /*+
+		return "`#p price {item name}`: Returns the item price.\n"; /*+
 				"`#deal {chaos}`: Returns all possible deals within X chaos.\n" +
 				"`#deal {item name}`: Returns information regarding a specific deal. This is the item itself, not the div card.";*/
 	}

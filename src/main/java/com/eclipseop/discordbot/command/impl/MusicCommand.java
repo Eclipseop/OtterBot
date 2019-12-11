@@ -38,17 +38,17 @@ public class MusicCommand extends Command {
 	}
 
 	@Override
-	public String[] getPrefixArgs() {
-		return new String[]{"play", "stop", "skip", "volume", "earrape", "playing"};
+	public String getPrefix() {
+		return "m";
 	}
 
 	@Override
 	public String getHelpText() {
-		return "`#play {url}`: Plays a specific video.\n" +
-				"`#play {text}`: Searches for a video with the given query.\n" +
-				"`#play {1-5}`: Plays a specific song from song selection.\n" +
-				"`#volume {num}`: Sets the volume of the player. Will Reset after every song.\n" +
-				"`#playing`: Shows the current song.";
+		return "`#m play {url}`: Plays a specific video.\n" +
+				"`#m play {text}`: Searches for a video with the given query.\n" +
+				"`#m play {1-5}`: Plays a specific song from song selection.\n" +
+				"`#m volume {num}`: Sets the volume of the player. Will Reset after every song.\n" +
+				"`#m playing`: Shows the current song.";
 	}
 
 	@Override
@@ -61,7 +61,7 @@ public class MusicCommand extends Command {
 			getBot().sendMessage("You are not currently in a voice channel!", textChannel);
 			return;
 		}
-		String command = trigger.getContentRaw().substring(1);
+		String command = trigger.getContentRaw().substring(3);
 
 		switch (command.split(" ")[0]) {
 			case "play":

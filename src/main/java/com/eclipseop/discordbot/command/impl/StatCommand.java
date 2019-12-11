@@ -17,8 +17,8 @@ public class StatCommand extends Command {
 	}
 
 	@Override
-	public String[] getPrefixArgs() {
-		return new String[]{"stats"};
+	public String getPrefix() {
+		return "stats";
 	}
 
 	@Override

@@ -19,7 +19,7 @@ public abstract class Command {
 		return bot;
 	}
 
-	public abstract String[] getPrefixArgs();
+	public abstract String getPrefix();
 	public abstract String getHelpText();
 	public abstract void execute(Message trigger);
 }
