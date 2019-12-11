@@ -71,7 +71,6 @@ public class EventHandler extends ListenerAdapter {
 			} else {
 				command.execute(event.getMessage());
 			}
-			command.execute(event.getMessage());
 		} else {
 			logger.debug("Received unknown arg[0] of " + args[0]);
 			bot.sendMessage(String.format("**Unknown command:** `%s`", args[0]), replyChannel);
