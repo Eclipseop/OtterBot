@@ -158,7 +158,7 @@ public class MusicCommand extends Command {
 				for (int i = 0; i < 5; i++) {
 					try {
 						AudioTrack audioTrack = queue.get(i);
-						songs += (i + 1) + " - " + audioTrack.getInfo().title + "\n";
+						songs += (i + 1) + " -> " + audioTrack.getInfo().title + "\n";
 					} catch (IndexOutOfBoundsException e) {
 						break;
 					}

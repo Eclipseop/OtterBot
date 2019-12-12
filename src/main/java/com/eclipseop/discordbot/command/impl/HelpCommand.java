@@ -32,6 +32,8 @@ public class HelpCommand extends Command {
 		messageBuilder.addField("p (poe)");
 		messageBuilder.addField("stats");
 
+		messageBuilder.setFooter("Need more help? Go to https://discord.gg/nZjHFJj");
+
 		getBot().sendMessage(messageBuilder.build(), textChannel);
 	}
 }
