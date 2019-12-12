@@ -9,7 +9,7 @@ import java.util.List;
 
 public class MessageBuilder {
 
-	private final String title;
+	private String title;
 	private final List<String> fields;
 	private Color color;
 	private String footer;
@@ -18,6 +18,10 @@ public class MessageBuilder {
 		this.title = title;
 		color = Color.CYAN;
 		fields = new ArrayList<>();
+	}
+
+	public MessageBuilder() {
+		this("");
 	}
 
 	public MessageBuilder addField(String field) {
@@ -32,6 +36,11 @@ public class MessageBuilder {
 
 	public MessageBuilder setFooter(String footer) {
 		this.footer = footer;
+		return this;
+	}
+
+	public MessageBuilder setTitle(String title) {
+		this.title = title;
 		return this;
 	}
 

@@ -33,7 +33,7 @@ public class StatCommand extends Command {
 	@Override
 	public void execute(Message trigger) {
 		MessageBuilder bot_stats = new MessageBuilder("Bot Stats");
-		bot_stats.addField("Servers1 -> " + getBot().getJda().getGuilds().size());
+		bot_stats.addField("Servers -> " + getBot().getJda().getGuilds().size());
 		bot_stats.addField("RAM Usage -> " + Math.round(getRamUsage() / 1000000L) + "MB | " + Math.round((getRamUsage() * 1.0 / Runtime.getRuntime().totalMemory()) * 100) + "%");
 		bot_stats.addField("Ping -> " + getBot().getJda().getGatewayPing());
 		bot_stats.addField("Uptime -> " + formatInterval(System.currentTimeMillis() - startTime));

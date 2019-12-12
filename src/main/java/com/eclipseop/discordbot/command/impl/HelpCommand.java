@@ -30,6 +30,7 @@ public class HelpCommand extends Command {
 		MessageBuilder messageBuilder = new MessageBuilder("Commands ('#{command} help' for options)");
 		messageBuilder.addField("m (music)");
 		messageBuilder.addField("p (poe)");
+		messageBuilder.addField("r (roll)");
 		messageBuilder.addField("stats");
 
 		messageBuilder.setFooter("Need more help? Go to https://discord.gg/nZjHFJj");
