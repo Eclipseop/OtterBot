@@ -84,25 +84,11 @@
             <artifactId>google-api-services-youtube</artifactId>
             <version>v3-rev204-1.24.1</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>19.0</version>
-        </dependency>
 
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>2.8.2</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>5.3.1</version>
-            <scope>test</scope>
         </dependency>
 
     </dependencies>
