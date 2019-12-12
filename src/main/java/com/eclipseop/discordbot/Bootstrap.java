@@ -1,11 +1,8 @@
 package com.eclipseop.discordbot;
 
 import com.eclipseop.discordbot.util.Key;
-import com.google.gson.Gson;
 
 import javax.security.auth.login.LoginException;
-import java.io.InputStreamReader;
-import java.util.Scanner;
 
 /**
  * Created by Eclipseop.
