@@ -24,5 +24,4 @@ OtterBot is a Java discord bot, using JDA.
 * [Gson](https://github.com/google/gson)
 * [LavaPlayer](https://github.com/sedmelluq/lavaplayer)
 * [YouTube API](https://developers.google.com/youtube/v3/)
-* [Guava](https://github.com/google/guava)
 * [Log4j](https://logging.apache.org/log4j/2.x/)
