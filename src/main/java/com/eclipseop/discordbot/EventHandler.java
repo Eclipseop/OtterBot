@@ -46,9 +46,6 @@ public class EventHandler extends ListenerAdapter {
 		User user = member.getUser();
 
 		String stringContent = event.getMessage().getContentRaw();
-		if (stringContent.equals("bad bot")) {
-			bot.sendMessage("sry <={", event.getMessage().getTextChannel());
-		}
 
 		final TextChannel replyChannel = event.getChannel();
 
