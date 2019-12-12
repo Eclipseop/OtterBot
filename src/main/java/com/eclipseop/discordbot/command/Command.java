@@ -2,6 +2,7 @@ package com.eclipseop.discordbot.command;
 
 import com.eclipseop.discordbot.Bot;
 import net.dv8tion.jda.api.entities.Message;
+import net.dv8tion.jda.api.entities.MessageEmbed;
 
 /**
  * Created by Eclipseop.
@@ -20,6 +21,7 @@ public abstract class Command {
 	}
 
 	public abstract String getPrefix();
-	public abstract String getHelpText();
+
+	public abstract MessageEmbed getHelpText();
 	public abstract void execute(Message trigger);
 }

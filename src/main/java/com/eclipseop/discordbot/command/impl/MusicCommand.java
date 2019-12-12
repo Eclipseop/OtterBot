@@ -5,6 +5,7 @@ import com.eclipseop.discordbot.command.Command;
 import com.eclipseop.discordbot.music.SongSelection;
 import com.eclipseop.discordbot.music.YoutubeSearcher;
 import com.eclipseop.discordbot.music.player.AudioHandler;
+import com.eclipseop.discordbot.util.MessageBuilder;
 import com.google.api.services.youtube.model.SearchResult;
 import com.sedmelluq.discord.lavaplayer.track.AudioTrack;
 import net.dv8tion.jda.api.EmbedBuilder;
@@ -15,6 +16,7 @@ import net.dv8tion.jda.api.entities.VoiceChannel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.awt.*;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
@@ -45,18 +47,22 @@ public class MusicCommand extends Command {
 	}
 
 	@Override
-	public String getHelpText() {
-		return "`#m play {url}`: Plays a specific video.\n" +
-				"`#m play {text}`: Searches for a video with the given query.\n" +
-				"`#m play {1-5}`: Plays a specific song from song selection.\n" +
-				"`#m volume {num}`: Sets the volume of the player. Will Reset after every song.\n" +
-				"`#m playing`: Shows the current song.\n" +
-				"`#m skip`: Skips the current song.\n" +
-				"`#m stop`: Stops all playback and clears the queue.\n" +
-				"`#m queue`: Shows the top 5 songs in the queue.\n" +
-				"`#m remove {1-5}`: Removes the nth song from the queue.\n" +
-				"`#m playing`: Shows the current song playing.\n" +
-				"`#m earrape`: Turns on *earrape* for the current song.\n";
+	public MessageEmbed getHelpText() {
+		MessageBuilder commands = new MessageBuilder("Music Commands");
+		commands.setColor(Color.GREEN);
+		commands.addField("**#m play {url}**: Plays a specific video.");
+		commands.addField("**#m play {text}**: Searches for a video with the given query.");
+		commands.addField("**#m play {1-5}**: Plays a specific song from song selection.");
+		commands.addField("**#m volume {num}**: Sets the volume of the player. Will Reset after every song.");
+		commands.addField("**#m playing**: Shows the current song.");
+		commands.addField("**#m skip**: Skips the current song.");
+		commands.addField("**#m stop**: Stops all playback and clears the queue.");
+		commands.addField("**#m queue**: Shows the top 5 songs in the queue.");
+		commands.addField("**#m remove {1-5}**: Removes the nth song from the queue.");
+		commands.addField("**#m playing**: Shows the current song playing.");
+		commands.addField("**#m earrape**: Turns on *earrape* for the current song.");
+
+		return commands.build();
 	}
 
 	@Override

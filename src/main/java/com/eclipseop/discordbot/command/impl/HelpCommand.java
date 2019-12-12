@@ -2,8 +2,9 @@ package com.eclipseop.discordbot.command.impl;
 
 import com.eclipseop.discordbot.Bot;
 import com.eclipseop.discordbot.command.Command;
-import net.dv8tion.jda.api.EmbedBuilder;
+import com.eclipseop.discordbot.util.MessageBuilder;
 import net.dv8tion.jda.api.entities.Message;
+import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.entities.TextChannel;
 
 public class HelpCommand extends Command {
@@ -18,20 +19,19 @@ public class HelpCommand extends Command {
 	}
 
 	@Override
-	public String getHelpText() {
+	public MessageEmbed getHelpText() {
 		return null;
 	}
 
 	@Override
 	public void execute(Message trigger) {
 		TextChannel textChannel = trigger.getTextChannel();
-		EmbedBuilder embedBuilder = new EmbedBuilder();
-		embedBuilder.addField(
-				"Commands ('#{command} help' for options):",
-				"੦ m (music)\n" +
-						"੦ p (poe)\n" +
-						"੦ stats\n",
-				false);
-		getBot().sendMessage(embedBuilder.build(), textChannel);
+
+		MessageBuilder messageBuilder = new MessageBuilder("Commands ('#{command} help' for options)");
+		messageBuilder.addField("m (music)");
+		messageBuilder.addField("p (poe)");
+		messageBuilder.addField("stats");
+
+		getBot().sendMessage(messageBuilder.build(), textChannel);
 	}
 }

@@ -4,8 +4,10 @@ import com.eclipseop.discordbot.Bot;
 import com.eclipseop.discordbot.command.Command;
 import com.eclipseop.discordbot.poe.FindDeals;
 import com.eclipseop.discordbot.poe.ItemLookup;
+import com.eclipseop.discordbot.util.MessageBuilder;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.Message;
+import net.dv8tion.jda.api.entities.MessageEmbed;
 
 import java.awt.*;
 
@@ -25,10 +27,11 @@ public class MerchCommand extends Command {
 	}
 
 	@Override
-	public String getHelpText() {
-		return "`#p price {item name}`: Returns the item price.\n"; /*+
-				"`#deal {chaos}`: Returns all possible deals within X chaos.\n" +
-				"`#deal {item name}`: Returns information regarding a specific deal. This is the item itself, not the div card.";*/
+	public MessageEmbed getHelpText() {
+		MessageBuilder commands = new MessageBuilder("Path of Exile Commands");
+		commands.setColor(Color.GREEN);
+		commands.addField("*#p price {item name}*: Returns the item price.");
+		return commands.build();
 	}
 
 	@Override

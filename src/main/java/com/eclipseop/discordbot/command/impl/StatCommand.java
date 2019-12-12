@@ -2,9 +2,11 @@ package com.eclipseop.discordbot.command.impl;
 
 import com.eclipseop.discordbot.Bot;
 import com.eclipseop.discordbot.command.Command;
-import net.dv8tion.jda.api.EmbedBuilder;
+import com.eclipseop.discordbot.util.MessageBuilder;
 import net.dv8tion.jda.api.entities.Message;
+import net.dv8tion.jda.api.entities.MessageEmbed;
 
+import java.awt.*;
 import java.util.concurrent.TimeUnit;
 
 public class StatCommand extends Command {
@@ -22,27 +24,20 @@ public class StatCommand extends Command {
 	}
 
 	@Override
-	public String getHelpText() {
-		return "Run to see misc stats about the bot.";
+	public MessageEmbed getHelpText() {
+		MessageBuilder commands = new MessageBuilder("Stats Command");
+		commands.setColor(Color.GREEN);
+		return commands.addField("Shows information regarding the bot.").build();
 	}
 
 	@Override
 	public void execute(Message trigger) {
-		EmbedBuilder embedBuilder = new EmbedBuilder();
-		embedBuilder.addField("Bot Stats", buildMessage(), false);
-
-		getBot().sendMessage(embedBuilder.build(), trigger.getTextChannel());
-	}
-
-	private String buildMessage() {
-		String temp = "";
-
-		temp += "੦ Servers -> " + getBot().getJda().getGuilds().size() + "\n";
-		temp += "੦ RAM Usage -> " + Math.round(getRamUsage() / 1000000L) + "MB | " + Math.round((getRamUsage() * 1.0 / Runtime.getRuntime().totalMemory()) * 100) + "%\n";
-		temp += "੦ Ping -> " + getBot().getJda().getGatewayPing() + "ms\n";
-		temp += "੦ Uptime -> " + formatInterval(System.currentTimeMillis() - startTime);
-
-		return temp;
+		MessageBuilder bot_stats = new MessageBuilder("Bot Stats");
+		bot_stats.addField("Servers1 -> " + getBot().getJda().getGuilds().size());
+		bot_stats.addField("RAM Usage -> " + Math.round(getRamUsage() / 1000000L) + "MB | " + Math.round((getRamUsage() * 1.0 / Runtime.getRuntime().totalMemory()) * 100) + "%");
+		bot_stats.addField("Ping -> " + getBot().getJda().getGatewayPing());
+		bot_stats.addField("Uptime -> " + formatInterval(System.currentTimeMillis() - startTime));
+		getBot().sendMessage(bot_stats.build(), trigger.getTextChannel());
 	}
 
 	private static String formatInterval(final long l) {
