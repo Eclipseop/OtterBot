@@ -1,6 +1,5 @@
 package com.eclipseop.discordbot.poe;
 
-import com.eclipseop.discordbot.Bootstrap;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
@@ -26,17 +25,17 @@ import java.util.stream.Collectors;
 public class FindDeals {
 
 	private static final String[] API_LINKS = {
-			"https://poe.ninja/api/data/currencyoverview?league=Blight&type=Currency",
-			"https://api.poe.watch/get?league=Blight&category=card",
-			"https://poe.ninja/api/data/itemoverview?league=Blight&type=UniqueArmour",
-			"https://poe.ninja/api/data/itemoverview?league=Blight&type=UniqueAccessory",
-			"https://poe.ninja/api/data/itemoverview?league=Blight&type=Prophecy",
-			"https://poe.ninja/api/data/itemoverview?league=Blight&type=UniqueMap",
-			"https://poe.ninja/api/data/itemoverview?league=Blight&type=UniqueFlask",
-			"https://poe.ninja/api/data/itemoverview?league=Blight&type=UniqueWeapon",
-			"https://poe.ninja/api/data/itemoverview?league=Blight&type=UniqueJewel",
-			"https://poe.ninja/api/data/itemoverview?league=Blight&type=SkillGem",
-			"https://poe.ninja/api/data/currencyoverview?league=Blight&type=Fragment"
+			"https://poe.ninja/api/data/currencyoverview?league=Metamorph&type=Currency",
+			"https://api.poe.watch/get?league=Metamorph&category=card",
+			"https://poe.ninja/api/data/itemoverview?league=Metamorph&type=UniqueArmour",
+			"https://poe.ninja/api/data/itemoverview?league=Metamorph&type=UniqueAccessory",
+			"https://poe.ninja/api/data/itemoverview?league=Metamorph&type=Prophecy",
+			"https://poe.ninja/api/data/itemoverview?league=Metamorph&type=UniqueMap",
+			"https://poe.ninja/api/data/itemoverview?league=Metamorph&type=UniqueFlask",
+			"https://poe.ninja/api/data/itemoverview?league=Metamorph&type=UniqueWeapon",
+			"https://poe.ninja/api/data/itemoverview?league=Metamorph&type=UniqueJewel",
+			"https://poe.ninja/api/data/itemoverview?league=Metamorph&type=SkillGem",
+			"https://poe.ninja/api/data/currencyoverview?league=Metamorph&type=Fragment"
 	};
 
 	private static final Gson GSON = new Gson();
@@ -49,10 +48,10 @@ public class FindDeals {
 					return cache.get(key);
 				}
 			});
-	private static final PossibleDeal[] possibleDeals;
+	private static final PossibleDeal[] possibleDeals = null;
 
 	static {
-		possibleDeals = GSON.fromJson(new InputStreamReader(Bootstrap.class.getClassLoader().getResourceAsStream("DealData.json")), PossibleDeal[].class);
+		//possibleDeals = GSON.fromJson(new InputStreamReader(Bootstrap.class.getClassLoader().getResourceAsStream("DealData.json")), PossibleDeal[].class);
 	}
 
 	public static ItemLookup getItem(String itemName) {

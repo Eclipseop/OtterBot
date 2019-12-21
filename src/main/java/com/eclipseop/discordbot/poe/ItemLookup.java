@@ -44,6 +44,13 @@ public class ItemLookup {
 		double getValue() {
 			return value;
 		}
+
+		@Override
+		public String toString() {
+			return "Receive{" +
+					"value=" + value +
+					'}';
+		}
 	}
 
 	public String getIcon() {

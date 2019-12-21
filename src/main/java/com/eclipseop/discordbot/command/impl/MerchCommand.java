@@ -36,8 +36,7 @@ public class MerchCommand extends Command {
 
 	@Override
 	public void execute(Message trigger) {
-		String command = trigger.getContentRaw().substring(1);
-
+		String command = trigger.getContentRaw().substring(3);
 		EmbedBuilder message = new EmbedBuilder();
 		message.setColor(Color.ORANGE);
 		switch (command.split(" ")[0]) {
@@ -80,7 +79,6 @@ public class MerchCommand extends Command {
 			 */
 			case "price":
 				ItemLookup item = FindDeals.getItem(command.replace("price ", ""));
-
 				if (item == null) return;
 				message.setTitle(item.getName());
 				message.setThumbnail(item.getIcon());
