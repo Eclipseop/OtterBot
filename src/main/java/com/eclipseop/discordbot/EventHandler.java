@@ -49,9 +49,11 @@ public class EventHandler extends ListenerAdapter {
 
 		final TextChannel replyChannel = event.getChannel();
 
+		/*
 		logger.info("Received message from: " + user.getAsTag() +
 				", in: " + event.getGuild().getName() + "#" + replyChannel.getName() +
 				", content: " + stringContent);
+		*/
 
 		if (!stringContent.startsWith("#")) return;
 		stringContent = stringContent.substring(1);
@@ -82,5 +84,9 @@ public class EventHandler extends ListenerAdapter {
 	@Override
 	public void onReady(@Nonnull ReadyEvent event) {
 		bot.sendMessage("OtterBot is back online!", event.getJDA().getTextChannelById("405168846283079692"));
+
+		bot.getJda().getGuilds().forEach(c -> {
+			System.out.println(c.getName() + " - " + c.getOwner().getUser().getAsTag());
+		});
 	}
 }
