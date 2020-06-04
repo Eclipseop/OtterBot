@@ -29,7 +29,7 @@ public class Bot {
 	public Bot() throws LoginException {
 		this.jda = JDABuilder.createDefault(Bootstrap.getKeys().getDiscordKey())
 				.setAutoReconnect(true)
-				.setActivity(Activity.playing("#help for commands!"))
+				.setActivity(Activity.playing("`help for commands!"))
 				.addEventListeners(new EventHandler(this))
 				.build();
 	}

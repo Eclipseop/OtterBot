@@ -27,9 +27,9 @@ public class RollCommand extends Command {
 	@Override
 	public MessageEmbed getHelpText() {
 		MessageBuilder commands = new MessageBuilder("Roll Command");
-		commands.addField("**#r**: Rolls a random number 1-10.");
-		commands.addField("**#r {max}**: Rolls a number 1-max.");
-		commands.addField("**#r {min, max}**: Rolls a number min-max.");
+		commands.addField("**`r**: Rolls a random number 1-10.");
+		commands.addField("**`r {max}**: Rolls a number 1-max.");
+		commands.addField("**`r {min, max}**: Rolls a number min-max.");
 
 		return commands.build();
 	}

@@ -57,7 +57,7 @@ public class EventHandler extends ListenerAdapter {
 				", content: " + stringContent);
 		*/
 
-		if (!stringContent.startsWith("#")) return;
+		if (!stringContent.startsWith("`")) return;
 		stringContent = stringContent.substring(1);
 
 		final String[] args = stringContent.split(" ");

@@ -27,7 +27,7 @@ public class HelpCommand extends Command {
 	public void execute(Message trigger) {
 		TextChannel textChannel = trigger.getTextChannel();
 
-		MessageBuilder messageBuilder = new MessageBuilder("Commands (Example: \"#m help\" for help towards the music specific commands)");
+		MessageBuilder messageBuilder = new MessageBuilder("Commands (Example: \"`m help\" for help towards the music specific commands)");
 		messageBuilder.addField("m (music)");
 		messageBuilder.addField("p (poe)");
 		messageBuilder.addField("r (roll)");

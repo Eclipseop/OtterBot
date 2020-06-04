@@ -50,17 +50,17 @@ public class MusicCommand extends Command {
 	public MessageEmbed getHelpText() {
 		MessageBuilder commands = new MessageBuilder("Music Commands");
 		commands.setColor(Color.GREEN);
-		commands.addField("**#m play {url}**: Plays a specific video.");
-		commands.addField("**#m play {text}**: Searches for a video with the given query.");
-		commands.addField("**#m play {1-5}**: Plays a specific song from song selection.");
-		commands.addField("**#m volume {num}**: Sets the volume of the player. Will Reset after every song.");
-		commands.addField("**#m playing**: Shows the current song.");
-		commands.addField("**#m skip**: Skips the current song.");
-		commands.addField("**#m stop**: Stops all playback and clears the queue.");
-		commands.addField("**#m queue**: Shows the top 5 songs in the queue.");
-		commands.addField("**#m remove {1-5}**: Removes the nth song from the queue.");
-		commands.addField("**#m playing**: Shows the current song playing.");
-		commands.addField("**#m earrape**: Turns on *earrape* for the current song.");
+		commands.addField("**`m play {url}**: Plays a specific video.");
+		commands.addField("**`m play {text}**: Searches for a video with the given query.");
+		commands.addField("**`m play {1-5}**: Plays a specific song from song selection.");
+		commands.addField("**`m volume {num}**: Sets the volume of the player. Will Reset after every song.");
+		commands.addField("**`m playing**: Shows the current song.");
+		commands.addField("**`m skip**: Skips the current song.");
+		commands.addField("**`m stop**: Stops all playback and clears the queue.");
+		commands.addField("**`m queue**: Shows the top 5 songs in the queue.");
+		commands.addField("**`m remove {1-5}**: Removes the nth song from the queue.");
+		commands.addField("**`m playing**: Shows the current song playing.");
+		commands.addField("**`m earrape**: Turns on *earrape* for the current song.");
 
 		return commands.build();
 	}
