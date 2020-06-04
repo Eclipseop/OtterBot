@@ -4,6 +4,7 @@ import com.eclipseop.discordbot.music.player.AudioHandler;
 import net.dv8tion.jda.api.AccountType;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
+import net.dv8tion.jda.api.OnlineStatus;
 import net.dv8tion.jda.api.entities.*;
 import net.dv8tion.jda.api.events.guild.voice.GuildVoiceUpdateEvent;
 import net.dv8tion.jda.api.managers.AudioManager;
@@ -26,13 +27,11 @@ public class Bot {
 	private final Map<Guild, AudioHandler> audioHandlers = new HashMap<>();
 
 	public Bot() throws LoginException {
-		this.jda = new JDABuilder(AccountType.BOT)
-				.setToken(Bootstrap.getKeys().getDiscordKey())
+		this.jda = JDABuilder.createDefault(Bootstrap.getKeys().getDiscordKey())
 				.setAutoReconnect(true)
 				.setActivity(Activity.playing("#help for commands!"))
+				.addEventListeners(new EventHandler(this))
 				.build();
-
-		jda.addEventListener(new EventHandler(this));
 	}
 
 	public void sendMessage(String message, TextChannel textChannel) {
@@ -64,7 +63,7 @@ public class Bot {
 			e.printStackTrace();
 		}
 
-		return audioManager.isAttemptingToConnect() || audioManager.isConnected();
+		return audioManager.isConnected();
 	}
 
 	public void handleLeaving(GuildVoiceUpdateEvent event) {
