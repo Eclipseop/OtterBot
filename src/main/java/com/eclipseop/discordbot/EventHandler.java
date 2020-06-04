@@ -33,7 +33,6 @@ public class EventHandler extends ListenerAdapter {
 		this.bot = bot;
 
 		commands.add(new MusicCommand(bot));
-		commands.add(new MerchCommand(bot));
 		commands.add(new HelpCommand(bot));
 		commands.add(new StatCommand(bot));
 		commands.add(new RollCommand(bot));
