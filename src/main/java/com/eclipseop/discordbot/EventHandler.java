@@ -1,7 +1,10 @@
 package com.eclipseop.discordbot;
 
 import com.eclipseop.discordbot.command.Command;
-import com.eclipseop.discordbot.command.impl.*;
+import com.eclipseop.discordbot.command.impl.HelpCommand;
+import com.eclipseop.discordbot.command.impl.MusicCommand;
+import com.eclipseop.discordbot.command.impl.RollCommand;
+import com.eclipseop.discordbot.command.impl.StatCommand;
 import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.TextChannel;
 import net.dv8tion.jda.api.entities.User;
@@ -83,9 +86,5 @@ public class EventHandler extends ListenerAdapter {
 	@Override
 	public void onReady(@Nonnull ReadyEvent event) {
 		bot.sendMessage("OtterBot is back online!", event.getJDA().getTextChannelById("405168846283079692"));
-
-		bot.getJda().getGuilds().forEach(c -> {
-			System.out.println(c.getName() + " - " + c.getOwner().getUser().getAsTag());
-		});
 	}
 }
