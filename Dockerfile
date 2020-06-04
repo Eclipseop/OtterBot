@@ -1,11 +1,10 @@
-FROM alpine/git AS clone
-WORKDIR /app
-RUN git clone https://github.com/Eclipseop/OtterBot.git
-
 FROM maven:3.5-jdk-8-alpine AS build
 WORKDIR /app
-COPY --from=clone /app/OtterBot /app
-RUN mvn clean package
+COPY OtterBot/pom.xml /app
+RUN mvn dependency:go-offline
+
+COPY OtterBot/src /app/src
+RUN mvn package
 
 FROM openjdk:8-jre-alpine
 WORKDIR /app
